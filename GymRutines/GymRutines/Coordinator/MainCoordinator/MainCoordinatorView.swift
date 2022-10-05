@@ -15,16 +15,22 @@ struct MainCoordinatorView: View {
     // MARK: - Body
     
     var body: some View {
-        NavigationView {
-            getSplashView()
-        }
+        getSplashView()
     }
     
     // MARK: - Views
     
     func getSplashView() -> some View {
-        
-        return SplashView(viewModel: coordinator.splashViewModel)
+        NavigationView {
+            SplashView(viewModel: coordinator.splashViewModel)
+                .navigation(isActive: $coordinator.loginIsActive) {
+                    getLoginView()
+                }
+        }
             
+    }
+
+    func getLoginView() -> some View {
+        LoginView(viewModel: coordinator.loginViewModel)
     }
 }
