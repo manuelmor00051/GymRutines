@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		3B17837028EDFB39004F536A /* GymRutinesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17836F28EDFB39004F536A /* GymRutinesApp.swift */; };
-		3B17837228EDFB39004F536A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837128EDFB39004F536A /* ContentView.swift */; };
+		3B17837228EDFB39004F536A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837128EDFB39004F536A /* SplashView.swift */; };
 		3B17837428EDFB3A004F536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B17837328EDFB3A004F536A /* Assets.xcassets */; };
 		3B17837728EDFB3A004F536A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B17837628EDFB3A004F536A /* Preview Assets.xcassets */; };
+		3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837D28EEAD40004F536A /* SplashViewModel.swift */; };
+		8E5C312D28F0525800876DE5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C312C28F0525800876DE5 /* BaseViewModel.swift */; };
+		8E5C312F28F0529500876DE5 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C312E28F0529500876DE5 /* BaseCoordinator.swift */; };
+		8E5C313328F0582900876DE5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C313228F0582900876DE5 /* MainCoordinator.swift */; };
+		8E5C313528F0583500876DE5 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C313428F0583500876DE5 /* MainCoordinatorView.swift */; };
+		8E5C313728F05AB100876DE5 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C313628F05AB100876DE5 /* DependencyInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B17836C28EDFB39004F536A /* GymRutines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymRutines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B17836F28EDFB39004F536A /* GymRutinesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymRutinesApp.swift; sourceTree = "<group>"; };
-		3B17837128EDFB39004F536A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B17837128EDFB39004F536A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3B17837328EDFB3A004F536A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B17837628EDFB3A004F536A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B17837D28EEAD40004F536A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		8E5C312C28F0525800876DE5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		8E5C312E28F0529500876DE5 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		8E5C313228F0582900876DE5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		8E5C313428F0583500876DE5 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		8E5C313628F05AB100876DE5 /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,12 @@
 		3B17836E28EDFB39004F536A /* GymRutines */ = {
 			isa = PBXGroup;
 			children = (
+				8E5C313628F05AB100876DE5 /* DependencyInjector.swift */,
+				8E5C313028F0580100876DE5 /* Coordinator */,
+				8E5C312B28F0524400876DE5 /* Base */,
 				3B17836F28EDFB39004F536A /* GymRutinesApp.swift */,
-				3B17837128EDFB39004F536A /* ContentView.swift */,
+				3B17837128EDFB39004F536A /* SplashView.swift */,
+				3B17837D28EEAD40004F536A /* SplashViewModel.swift */,
 				3B17837328EDFB3A004F536A /* Assets.xcassets */,
 				3B17837528EDFB3A004F536A /* Preview Content */,
 			);
@@ -65,6 +81,32 @@
 				3B17837628EDFB3A004F536A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E5C312B28F0524400876DE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8E5C312C28F0525800876DE5 /* BaseViewModel.swift */,
+				8E5C312E28F0529500876DE5 /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8E5C313028F0580100876DE5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8E5C313128F0581400876DE5 /* MainCoordinator */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8E5C313128F0581400876DE5 /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8E5C313228F0582900876DE5 /* MainCoordinator.swift */,
+				8E5C313428F0583500876DE5 /* MainCoordinatorView.swift */,
+			);
+			path = MainCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B17837228EDFB39004F536A /* ContentView.swift in Sources */,
+				8E5C313728F05AB100876DE5 /* DependencyInjector.swift in Sources */,
+				8E5C312F28F0529500876DE5 /* BaseCoordinator.swift in Sources */,
+				8E5C313328F0582900876DE5 /* MainCoordinator.swift in Sources */,
+				8E5C313528F0583500876DE5 /* MainCoordinatorView.swift in Sources */,
+				3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */,
+				8E5C312D28F0525800876DE5 /* BaseViewModel.swift in Sources */,
+				3B17837228EDFB39004F536A /* SplashView.swift in Sources */,
 				3B17837028EDFB39004F536A /* GymRutinesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
