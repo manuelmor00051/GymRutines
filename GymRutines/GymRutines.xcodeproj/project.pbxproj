@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		3B17837028EDFB39004F536A /* GymRutinesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17836F28EDFB39004F536A /* GymRutinesApp.swift */; };
 		3B17837228EDFB39004F536A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837128EDFB39004F536A /* SplashView.swift */; };
-		3B17837428EDFB3A004F536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B17837328EDFB3A004F536A /* Assets.xcassets */; };
+		3B17837428EDFB3A004F536A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B17837328EDFB3A004F536A /* Images.xcassets */; };
 		3B17837728EDFB3A004F536A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B17837628EDFB3A004F536A /* Preview Assets.xcassets */; };
 		3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837D28EEAD40004F536A /* SplashViewModel.swift */; };
 		3B1E0222292503AA00893B6E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E0221292503AA00893B6E /* LoginView.swift */; };
 		3B1E0224292503BD00893B6E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E0223292503BD00893B6E /* LoginViewModel.swift */; };
+		3BD89C7C29795B5A0014DD5E /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C7B29795B5A0014DD5E /* Objects.swift */; };
+		3BD89C8029795CF20014DD5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C7F29795CF20014DD5E /* Constants.swift */; };
+		3BD89C81297963DE0014DD5E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD89C7D29795C190014DD5E /* Colors.xcassets */; };
+		3BD89C842979720E0014DD5E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C832979720E0014DD5E /* Buttons.swift */; };
 		8E5C312D28F0525800876DE5 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C312C28F0525800876DE5 /* BaseViewModel.swift */; };
 		8E5C312F28F0529500876DE5 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C312E28F0529500876DE5 /* BaseCoordinator.swift */; };
 		8E5C313328F0582900876DE5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C313228F0582900876DE5 /* MainCoordinator.swift */; };
@@ -26,11 +30,15 @@
 		3B17836C28EDFB39004F536A /* GymRutines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymRutines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B17836F28EDFB39004F536A /* GymRutinesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymRutinesApp.swift; sourceTree = "<group>"; };
 		3B17837128EDFB39004F536A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		3B17837328EDFB3A004F536A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B17837328EDFB3A004F536A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B17837628EDFB3A004F536A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B17837D28EEAD40004F536A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		3B1E0221292503AA00893B6E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B1E0223292503BD00893B6E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3BD89C7B29795B5A0014DD5E /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		3BD89C7D29795C190014DD5E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3BD89C7F29795CF20014DD5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BD89C832979720E0014DD5E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8E5C312C28F0525800876DE5 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		8E5C312E28F0529500876DE5 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		8E5C313228F0582900876DE5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -69,13 +77,15 @@
 		3B17836E28EDFB39004F536A /* GymRutines */ = {
 			isa = PBXGroup;
 			children = (
+				3BD89C7929795AF70014DD5E /* Commons */,
 				3B1E021D2925032B00893B6E /* Scenes */,
 				8E5C313628F05AB100876DE5 /* DependencyInjector.swift */,
 				8E5C313028F0580100876DE5 /* Coordinator */,
 				8E5C312B28F0524400876DE5 /* Base */,
 				3B17836F28EDFB39004F536A /* GymRutinesApp.swift */,
 				AFA19DD129785C4F00099881 /* Extension+Views.swift */,
-				3B17837328EDFB3A004F536A /* Assets.xcassets */,
+				3B17837328EDFB3A004F536A /* Images.xcassets */,
+				3BD89C7D29795C190014DD5E /* Colors.xcassets */,
 				3B17837528EDFB3A004F536A /* Preview Content */,
 			);
 			path = GymRutines;
@@ -114,6 +124,40 @@
 				3B1E0223292503BD00893B6E /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3BD89C7929795AF70014DD5E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C7E29795CD20014DD5E /* Constants */,
+				3BD89C7A29795B010014DD5E /* Views */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		3BD89C7A29795B010014DD5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C82297971F90014DD5E /* Buttons */,
+				3BD89C7B29795B5A0014DD5E /* Objects.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BD89C7E29795CD20014DD5E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C7F29795CF20014DD5E /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3BD89C82297971F90014DD5E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3BD89C832979720E0014DD5E /* Buttons.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		8E5C312B28F0524400876DE5 /* Base */ = {
@@ -200,8 +244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD89C81297963DE0014DD5E /* Colors.xcassets in Resources */,
 				3B17837728EDFB3A004F536A /* Preview Assets.xcassets in Resources */,
-				3B17837428EDFB3A004F536A /* Assets.xcassets in Resources */,
+				3B17837428EDFB3A004F536A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +264,12 @@
 				8E5C313528F0583500876DE5 /* MainCoordinatorView.swift in Sources */,
 				3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */,
 				8E5C312D28F0525800876DE5 /* BaseViewModel.swift in Sources */,
+				3BD89C842979720E0014DD5E /* Buttons.swift in Sources */,
+				3BD89C8029795CF20014DD5E /* Constants.swift in Sources */,
 				AFA19DD229785C4F00099881 /* Extension+Views.swift in Sources */,
 				3B17837228EDFB39004F536A /* SplashView.swift in Sources */,
 				3B1E0224292503BD00893B6E /* LoginViewModel.swift in Sources */,
+				3BD89C7C29795B5A0014DD5E /* Objects.swift in Sources */,
 				3B17837028EDFB39004F536A /* GymRutinesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +407,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

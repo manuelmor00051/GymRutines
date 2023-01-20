@@ -16,7 +16,8 @@ class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
         super.init(coordinator: coordinator)
     }
 
-    func entrar() {
-        print("")
+    func logIn(userName: String, password: String) {
+        print(userName)
+        print(password)
     }
 }

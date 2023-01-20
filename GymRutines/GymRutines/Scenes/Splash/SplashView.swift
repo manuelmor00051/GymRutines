@@ -13,15 +13,15 @@ struct SplashView: View {
 
     var body: some View {
         ZStack {
-            Image("launch")
+            Color.black
+                .opacity(0.99)
+                .ignoresSafeArea()
+            Image("GymRutines")
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .ignoresSafeArea()
                 .opacity(0.8)
             VStack {
-                Text("Crea tu rutina")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
                 Spacer()
                 if viewModel.showLoading {
                     ProgressView()
