@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 class SplashViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
-    @Published var showLoading = false
+    @Published var showLoading = true
 
     init(coordinator: MainCoordinatorProtocol) {
         super.init(coordinator: coordinator)
@@ -18,7 +18,8 @@ class SplashViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject 
 
     func onAppear() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.showLoading = true
+            self.showLoading = false
+            self.getCoordinator()?.navigateToLogin()
         }
     }
 }
