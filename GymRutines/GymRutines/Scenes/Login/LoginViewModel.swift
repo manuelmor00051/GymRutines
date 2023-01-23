@@ -11,13 +11,10 @@ import SwiftUI
 class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
     @Published var userName: String = ""
     @Published var password: String = ""
+    @Published var confirmPassword: String = ""
+    @Published var isSignUp: Bool = false
 
     init(coordinator: MainCoordinatorProtocol) {
         super.init(coordinator: coordinator)
-    }
-
-    func logIn(userName: String, password: String) {
-        print(userName)
-        print(password)
     }
 }

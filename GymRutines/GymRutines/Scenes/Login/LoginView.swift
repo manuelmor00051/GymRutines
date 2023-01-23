@@ -10,9 +10,6 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var viewModel: LoginViewModel
-    
-    @State var userName: String = ""
-    @State var password: String = ""
 
     var body: some View {
         ZStack {
@@ -32,28 +29,34 @@ struct LoginView: View {
                 }
                 .frame(height: UIScreen.main.bounds.height / 3)
                 VStack {
-                    Text("Inicia Sesión")
+                    Text(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión")
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
                     Form {
                         Section() {
-                            TextField(text: $userName, prompt: Text("Usuario")) {
+                            TextField(text: $viewModel.userName, prompt: Text("Usuario")) {
                                 Text("Usuario")
                             }
+                            .autocapitalization(.none)
+                            .autocorrectionDisabled()
                         }
-                        SecureField(text: $password, prompt: Text("Contraseña")) {
+                        SecureField(text: $viewModel.password, prompt: Text("Contraseña")) {
                             Text("Contraseña")
                         }
+                        Section() {
+                            SecureField(text: $viewModel.confirmPassword, prompt: Text("Confirmar Contraseña")) {
+                                Text("Confirmar Contraseña")
+                            }
+                        }
                     }
-                    .frame(height: 200)
+                    .frame(height: viewModel.isSignUp ? 260 : 180)
                     .padding(.horizontal)
                     .padding(.horizontal)
                     .scrollContentBackground(.hidden)
                     .background(Constants.Colors.backgroundGray.ignoresSafeArea())
+                    Button(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión") {
 
-                    Button("Iniciar Sesión") {
-                        self.viewModel.logIn(userName: userName, password: password)
                     }
                     .buttonStyle(RedButton())
 
@@ -61,10 +64,14 @@ struct LoginView: View {
 
                     }
 
-                    Button("Regístrate") {
-
+                    Button(viewModel.isSignUp ? "Inicia Sesión" : "Regístrate") {
+                        if viewModel.isSignUp {
+                            viewModel.isSignUp = false
+                        } else {
+                            viewModel.isSignUp = true
+                        }
                     }
-                    Spacer()
+                    Spacer(minLength: 60)
                 }
                 .background(Constants.Colors.backgroundGray.ignoresSafeArea())
             }
