@@ -35,7 +35,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                     Form {
                         Section() {
-                            TextField(text: $viewModel.userName, prompt: Text("Usuario")) {
+                            TextField(text: $viewModel.email, prompt: Text("Email")) {
                                 Text("Usuario")
                             }
                             .autocapitalization(.none)
@@ -51,14 +51,16 @@ struct LoginView: View {
                         }
                     }
                     .frame(height: viewModel.isSignUp ? 260 : 180)
-                    .padding(.horizontal)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 30)
                     .scrollContentBackground(.hidden)
                     .background(Constants.Colors.backgroundGray.ignoresSafeArea())
                     Button(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión") {
-
+                        viewModel.logIn()
                     }
                     .buttonStyle(RedButton())
+                    .alert(isPresented: $viewModel.showLoginAlert) {
+                        ShowAlert().show(alert: viewModel.alert ?? .notMatchPassword)
+                    }
 
                     Button("¿Olvidaste tu contraseña?") {
 

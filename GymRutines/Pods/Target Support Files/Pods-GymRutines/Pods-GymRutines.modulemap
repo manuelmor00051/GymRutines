@@ -1,0 +1,6 @@
+framework module Pods_GymRutines {
+  umbrella header "Pods-GymRutines-umbrella.h"
+
+  export *
+  module * { export * }
+}
