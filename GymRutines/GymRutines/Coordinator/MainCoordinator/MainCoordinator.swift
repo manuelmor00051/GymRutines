@@ -9,6 +9,8 @@ import SwiftUI
 
 protocol MainCoordinatorProtocol: BaseCoordinatorProtocol {
     func navigateToLogin()
+    func navigateToMain()
+    func popToLogin()
 }
 
 class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
@@ -17,11 +19,20 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
     
     @Published private(set) var splashViewModel: SplashViewModel!
     @Published private(set) var loginViewModel: LoginViewModel!
+    @Published private(set) var mainViewModel: MainViewModel!
 
     @Published var loginIsActive: Bool = false {
         didSet {
             if !loginIsActive {
                 loginViewModel = nil
+            }
+        }
+    }
+
+    @Published var mainIsActive: Bool = false {
+        didSet {
+            if !mainIsActive {
+                mainViewModel = nil
             }
         }
     }
@@ -42,5 +53,14 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
     func navigateToLogin() {
         loginViewModel = DependencyInjector.shared.getLoginViewModel(coordinator: self)
         loginIsActive = true
+    }
+
+    func navigateToMain() {
+        mainViewModel = DependencyInjector.shared.getMainViewModel(coordinator: self)
+        mainIsActive = true
+    }
+
+    func popToLogin() {
+        mainIsActive = false
     }
 }
