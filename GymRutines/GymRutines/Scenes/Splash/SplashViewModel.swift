@@ -6,15 +6,10 @@
 //
 
 import Foundation
-import Combine
 import SwiftUI
 
 class SplashViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
     @Published var showLoading = true
-
-    init(coordinator: MainCoordinatorProtocol) {
-        super.init(coordinator: coordinator)
-    }
 
     func onAppear() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {

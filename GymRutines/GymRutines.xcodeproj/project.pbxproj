@@ -14,8 +14,15 @@
 		3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B17837D28EEAD40004F536A /* SplashViewModel.swift */; };
 		3B1E0222292503AA00893B6E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E0221292503AA00893B6E /* LoginView.swift */; };
 		3B1E0224292503BD00893B6E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E0223292503BD00893B6E /* LoginViewModel.swift */; };
+		3B35EF1029826D23009ECCA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35EF0F29826D23009ECCA5 /* MainView.swift */; };
+		3B35EF1229826E26009ECCA5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35EF1129826E26009ECCA5 /* MainViewModel.swift */; };
+		3B35EF162982A996009ECCA5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35EF152982A996009ECCA5 /* ProgressView.swift */; };
+		3B35EF192982AA68009ECCA5 /* ProgressCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35EF182982AA68009ECCA5 /* ProgressCellView.swift */; };
+		3B35EF1B2982DCBE009ECCA5 /* ProgressCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35EF1A2982DCBE009ECCA5 /* ProgressCellModel.swift */; };
 		3B87E310297E996200375DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B87E30F297E996200375DC9 /* GoogleService-Info.plist */; };
 		3B87E317297EB8DA00375DC9 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87E316297EB8DA00375DC9 /* Alerts.swift */; };
+		3B87E31F297FE00100375DC9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87E31E297FE00100375DC9 /* HomeViewModel.swift */; };
+		3B87E321297FE00C00375DC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B87E320297FE00C00375DC9 /* HomeView.swift */; };
 		3BD89C7C29795B5A0014DD5E /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C7B29795B5A0014DD5E /* Objects.swift */; };
 		3BD89C8029795CF20014DD5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD89C7F29795CF20014DD5E /* Constants.swift */; };
 		3BD89C81297963DE0014DD5E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD89C7D29795C190014DD5E /* Colors.xcassets */; };
@@ -38,8 +45,15 @@
 		3B17837D28EEAD40004F536A /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		3B1E0221292503AA00893B6E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B1E0223292503BD00893B6E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3B35EF0F29826D23009ECCA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3B35EF1129826E26009ECCA5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		3B35EF152982A996009ECCA5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3B35EF182982AA68009ECCA5 /* ProgressCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCellView.swift; sourceTree = "<group>"; };
+		3B35EF1A2982DCBE009ECCA5 /* ProgressCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCellModel.swift; sourceTree = "<group>"; };
 		3B87E30F297E996200375DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B87E316297EB8DA00375DC9 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		3B87E31E297FE00100375DC9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3B87E320297FE00C00375DC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3BD89C7B29795B5A0014DD5E /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		3BD89C7D29795C190014DD5E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3BD89C7F29795CF20014DD5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -114,6 +128,8 @@
 		3B1E021D2925032B00893B6E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B35EF0E29826D0F009ECCA5 /* Main */,
+				3B87E31D297FDFCD00375DC9 /* Home */,
 				3B1E02202925038300893B6E /* Login */,
 				3B1E021E2925034600893B6E /* Splash */,
 			);
@@ -138,12 +154,48 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		3B35EF0E29826D0F009ECCA5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3B35EF0F29826D23009ECCA5 /* MainView.swift */,
+				3B35EF1129826E26009ECCA5 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3B35EF142982A972009ECCA5 /* MyProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				3B35EF172982AA4B009ECCA5 /* ProgressCell */,
+				3B35EF152982A996009ECCA5 /* ProgressView.swift */,
+			);
+			path = MyProgressView;
+			sourceTree = "<group>";
+		};
+		3B35EF172982AA4B009ECCA5 /* ProgressCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B35EF182982AA68009ECCA5 /* ProgressCellView.swift */,
+				3B35EF1A2982DCBE009ECCA5 /* ProgressCellModel.swift */,
+			);
+			path = ProgressCell;
+			sourceTree = "<group>";
+		};
 		3B87E315297EB8C400375DC9 /* messages */ = {
 			isa = PBXGroup;
 			children = (
 				3B87E316297EB8DA00375DC9 /* Alerts.swift */,
 			);
 			path = messages;
+			sourceTree = "<group>";
+		};
+		3B87E31D297FDFCD00375DC9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B87E31E297FE00100375DC9 /* HomeViewModel.swift */,
+				3B87E320297FE00C00375DC9 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3BD89C7929795AF70014DD5E /* Commons */ = {
@@ -159,6 +211,7 @@
 		3BD89C7A29795B010014DD5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B35EF142982A972009ECCA5 /* MyProgressView */,
 				3BD89C82297971F90014DD5E /* Buttons */,
 				3BD89C7B29795B5A0014DD5E /* Objects.swift */,
 			);
@@ -341,20 +394,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E5C313728F05AB100876DE5 /* DependencyInjector.swift in Sources */,
+				3B35EF1029826D23009ECCA5 /* MainView.swift in Sources */,
 				8E5C312F28F0529500876DE5 /* BaseCoordinator.swift in Sources */,
 				3B87E317297EB8DA00375DC9 /* Alerts.swift in Sources */,
+				3B87E31F297FE00100375DC9 /* HomeViewModel.swift in Sources */,
 				8E5C313328F0582900876DE5 /* MainCoordinator.swift in Sources */,
+				3B87E321297FE00C00375DC9 /* HomeView.swift in Sources */,
 				3B1E0222292503AA00893B6E /* LoginView.swift in Sources */,
 				8E5C313528F0583500876DE5 /* MainCoordinatorView.swift in Sources */,
+				3B35EF192982AA68009ECCA5 /* ProgressCellView.swift in Sources */,
 				3B17837E28EEAD40004F536A /* SplashViewModel.swift in Sources */,
 				8E5C312D28F0525800876DE5 /* BaseViewModel.swift in Sources */,
 				3BD89C842979720E0014DD5E /* Buttons.swift in Sources */,
 				3BD89C8029795CF20014DD5E /* Constants.swift in Sources */,
+				3B35EF1B2982DCBE009ECCA5 /* ProgressCellModel.swift in Sources */,
 				AFA19DD229785C4F00099881 /* Extension+Views.swift in Sources */,
 				3B17837228EDFB39004F536A /* SplashView.swift in Sources */,
 				3B1E0224292503BD00893B6E /* LoginViewModel.swift in Sources */,
 				3BD89C7C29795B5A0014DD5E /* Objects.swift in Sources */,
+				3B35EF162982A996009ECCA5 /* ProgressView.swift in Sources */,
 				3B17837028EDFB39004F536A /* GymRutinesApp.swift in Sources */,
+				3B35EF1229826E26009ECCA5 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

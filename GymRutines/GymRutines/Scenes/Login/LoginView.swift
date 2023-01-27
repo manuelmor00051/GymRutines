@@ -32,7 +32,7 @@ struct LoginView: View {
                     Text(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión")
                         .font(.title)
                         .bold()
-                        .foregroundColor(.white)
+                        .foregroundColor(Constants.Colors.redApp)
                     Form {
                         Section() {
                             TextField(text: $viewModel.email, prompt: Text("Email")) {
@@ -54,7 +54,7 @@ struct LoginView: View {
                     .padding(.horizontal, 30)
                     .scrollContentBackground(.hidden)
                     .background(Constants.Colors.backgroundGray.ignoresSafeArea())
-                    Button(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión") {
+                    Button(viewModel.isSignUp ? "Regístrate" : "Iniciar Sesión") {
                         viewModel.logIn()
                     }
                     .buttonStyle(RedButton())
@@ -73,6 +73,7 @@ struct LoginView: View {
                             viewModel.isSignUp = true
                         }
                     }
+                    
                     Spacer(minLength: 60)
                 }
                 .background(Constants.Colors.backgroundGray.ignoresSafeArea())

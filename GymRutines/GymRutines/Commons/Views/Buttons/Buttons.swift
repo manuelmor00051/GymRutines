@@ -11,6 +11,7 @@ struct RedButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
             configuration.label
                 .padding()
+                .controlSize(.large)
                 .background(Constants.Colors.redApp)
                 .foregroundColor(.white)
                 .cornerRadius(10)
