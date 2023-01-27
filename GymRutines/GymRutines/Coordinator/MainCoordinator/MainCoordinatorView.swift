@@ -32,5 +32,12 @@ struct MainCoordinatorView: View {
 
     func getLoginView() -> some View {
         LoginView(viewModel: coordinator.loginViewModel)
+            .navigation(isActive: $coordinator.mainIsActive) {
+                getMainView()
+            }
+    }
+
+    func getMainView() -> some View {
+        MainView(viewModel: coordinator.mainViewModel)
     }
 }

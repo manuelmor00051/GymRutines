@@ -27,7 +27,15 @@ class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
                 Auth.auth().createUser(withEmail: email, password: password) {
                     (result, error) in
                     if let result = result, error == nil {
-                        print("usuario creado") // TODO: - navigation and login
+                        Auth.auth().signIn(withEmail: self.email, password: self.password) {
+                            (result, error) in
+                            if let result = result, error == nil {
+                                self.getCoordinator()?.navigateToMain()
+                            } else {
+                                self.alert = .wronLogIn
+                                self.showLoginAlert = true
+                            }
+                        }
                     } else {
                         self.alert = .wrongSignUp
                         self.showLoginAlert = true
@@ -36,7 +44,20 @@ class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
             } else if isSignUp && password != confirmPassword {
                 self.alert = .notMatchPassword
                 showLoginAlert = true
+            } else {
+                Auth.auth().signIn(withEmail: email, password: password) {
+                    (result, error) in
+                    if let result = result, error == nil {
+                        self.getCoordinator()?.navigateToMain()
+                    } else {
+                        self.alert = .wronLogIn
+                        self.showLoginAlert = true
+                    }
+                }
             }
+        } else {
+            self.alert = .emptyEmailOrPassword
+            self.showLoginAlert = true
         }
     }
 
