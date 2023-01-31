@@ -10,6 +10,17 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var viewModel: LoginViewModel
+    @FocusState private var emailIsFocused: Bool
+    @FocusState private var passwordIsFocused: Bool
+    @FocusState private var confirmPasswordIsFocused: Bool
+    private var headerHeight: CGFloat {
+        if emailIsFocused || passwordIsFocused || confirmPasswordIsFocused {
+            return .zero
+        } else {
+            return UIScreen.main.bounds.height / 3
+        }
+    }
+
 
     var body: some View {
         ZStack {
@@ -27,7 +38,8 @@ struct LoginView: View {
                         .frame(width: UIScreen.main.bounds.width)
                         .rotationEffect(Angle(degrees: -90.0))
                 }
-                .frame(height: UIScreen.main.bounds.height / 3)
+                .opacity(headerHeight == .zero ? 0 : 1)
+                .frame(height: headerHeight)
                 VStack {
                     Text(viewModel.isSignUp ? "Regístrate" : "Inicia Sesión")
                         .font(.title)
@@ -38,19 +50,25 @@ struct LoginView: View {
                             TextField(text: $viewModel.email, prompt: Text("Email")) {
                                 Text("Usuario")
                             }
+                            .focused($emailIsFocused)
                             .autocapitalization(.none)
                             .autocorrectionDisabled()
                         }
                         SecureField(text: $viewModel.password, prompt: Text("Contraseña")) {
                             Text("Contraseña")
                         }
-                        Section() {
-                            SecureField(text: $viewModel.confirmPassword, prompt: Text("Confirmar Contraseña")) {
-                                Text("Confirmar Contraseña")
+                        .focused($passwordIsFocused)
+                        if viewModel.isSignUp {
+                            Section() {
+                                SecureField(text: $viewModel.confirmPassword, prompt: Text("Confirmar Contraseña")) {
+                                    Text("Confirmar Contraseña")
+                                }
+                                .focused($confirmPasswordIsFocused)
                             }
                         }
                     }
-                    .frame(height: viewModel.isSignUp ? 260 : 180)
+                    .scrollDisabled(true)
+                    .padding(.vertical, -16)
                     .padding(.horizontal, 30)
                     .scrollContentBackground(.hidden)
                     .background(Constants.Colors.backgroundGray.ignoresSafeArea())
@@ -73,11 +91,16 @@ struct LoginView: View {
                             viewModel.isSignUp = true
                         }
                     }
-                    
-                    Spacer(minLength: 60)
                 }
-                .background(Constants.Colors.backgroundGray.ignoresSafeArea())
+                .padding(.bottom)
             }
+        }
+        .background(Constants.Colors.backgroundGray.ignoresSafeArea())
+        .animation(.easeIn(duration: 0.3), value: headerHeight)
+        .onTapGesture {
+            emailIsFocused = false
+            passwordIsFocused = false
+            confirmPasswordIsFocused = false
         }
         .navigationBarBackButtonHidden(true)
     }

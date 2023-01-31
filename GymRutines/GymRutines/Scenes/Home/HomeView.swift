@@ -14,23 +14,30 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                MyProgressView()
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        viewModel.openCloseSessionDialog()
-                    } label: {
-                        Label("", systemImage: "rectangle.portrait.and.arrow.forward")
-                    }
-                    .alert(isPresented: $viewModel.showCloseSessionDialog) {
-                        Alert(title: Text("Cerrar Sesión"), message: Text("¿Seguro que desea cerrar sesión?"), primaryButton: .default(Text("SI"), action: viewModel.logOut), secondaryButton: .default(Text("NO"), action: viewModel.returnToMain))
+                VStack {
+                    Image("Loading")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.width, height: 150)
+                    MyProgressView()
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            viewModel.openCloseSessionDialog()
+                        } label: {
+                            Label("", systemImage: "rectangle.portrait.and.arrow.forward")
+                        }
+                        .font(.title2)
+                        .alert(isPresented: $viewModel.showCloseSessionDialog) {
+                            Alert(title: Text("Cerrar Sesión"), message: Text("¿Seguro que desea cerrar sesión?"), primaryButton: .default(Text("SI"), action: viewModel.logOut), secondaryButton: .destructive(Text("NO")))
+                        }
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width)
+                .navigationTitle("Tu Progreso")
             }
-            .navigationTitle("Tu Progreso")
-
-        }.onAppear {
+        }
+        .onAppear {
             UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.accentColor)]
 
             UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.accentColor)]
@@ -41,19 +48,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(viewModel: HomeViewModel(coordinator: MainCoordinator()))
+        
     }
 }
-
-/*HStack {
-    Spacer()
-    Button {
-        viewModel.openCloseSessionDialog()
-    } label: {
-        Label("", systemImage: "rectangle.portrait.and.arrow.forward")
-    }
-    .foregroundColor(Constants.Colors.redApp)
-    .padding(.leading)
-    .alert(isPresented: $viewModel.showCloseSessionDialog) {
-        Alert(title: Text("Cerrar Sesión"), message: Text("¿Seguro que desea cerrar sesión?"), primaryButton: .default(Text("SI"), action: viewModel.logOut), secondaryButton: .default(Text("NO"), action: viewModel.returnToMain))
-    }
-}*/

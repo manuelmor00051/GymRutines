@@ -18,6 +18,11 @@ struct MainView: View {
                     Image(systemName: "house.fill")
                     Text("Inicio")
                 }
+            ExerciseRoutineView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Rutinas")
+                }
         }
         .navigationBarBackButtonHidden(true)
     }
